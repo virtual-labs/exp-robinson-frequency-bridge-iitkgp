@@ -2,37 +2,139 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Wien bridge is suitable for measurement of frequency roughly in the range of",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "100Hz to 100kHz",
+        "b": "0 Hz to 100kHz",
+        "c": "100Hz to 1000KHz",
+        "d": "0 Hz to 100Hz"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "You have choosen option (a). The answer is correct",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (a).",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (a).",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (a)."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "The bridge is designed to be frequency sensitive but what kind of periodic waveform will cause least amount of distortion when finding null point?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "triangular",
+        "b": "sinusoidal",
+        "c": "pulse train",
+        "d": "square"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (b).",
+        "b": "You have choosen option (b). The answer is correct",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (b).",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (b)."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "We have two frequency dependent passive elements in the experiment. They can be either a pair of capacitors or a pair of inductors. If inductors are used then what specific unwanted phenomenon might happen?",
+      "answers": {
+        "a": "eddy current errors",
+        "b": "stray capacitance effect" ,
+        "c": "stray magnetic coupling" ,
+        "d": "stray conductance effect" 
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (c).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (c).",
+        "c": "You have choosen option (c). The answer is correct.",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (c)."
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+     {
+      "question": "what generic design of inductors can be used to remove magnetic coupling in the bridge circuit?",
+      "answers": {
+        "a": "solenoid",
+        "b": "fractal" ,
+        "c": "toroid" ,
+        "d": "planar coil inductors" 
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (c).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (c).",
+        "c": "You have choosen option (c). The answer is correct.",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (c)."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+     {
+      "question": "Stray capacitance between the bridge elements and also between bridge element and the ground affect the accuracy of AC bridge measurment. To avoid that we shield the individual elements. Among the following measures, which one cannot be done through shielding?",
+      "answers": {
+        "a": "It preserves the true magnitude of the components",
+        "b": "It keeps noise out of measurement" ,
+        "c": "It prevents residual error due to inherent capacitance and inductance present in resistors" ,
+        "d": "It prevents magnetic interference by acting like a faraday cage" 
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (c).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (c).",
+        "c": "You have choosen option (c). The answer is correct.",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (c)."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+     {
+      "question": "A bridge consisting of inductors is shown in the given figure. It consists of a coil with inductance L<sub>1</sub> and resistance r<sub>1</sub> in series with a non-inductive resistance R. Arm <i>bc</i> and <i>cd</i> are each a non-inductive resistance of 100 ohm. Arm <i>ad</i> consists of standard variable inductor L of resistance 32.7 ohm. Balance is obtained when L = 47.8 mH and R = 1.36 ohm. Find the resistance and inductance of coil in the arm <i>ab</i>.<br><p style=\"text-align:center\"><img src=\"./image/quiz1.jpg\" style=\"width:auto;height:auto;\"></p>",
+      "answers": {
+        "a": "32.34 ohm ; 40.8 mH",
+        "b": "29.34 ohm ; 51.8 mH" ,
+        "c": "30.34 ohm ; 45.8 mH" ,
+        "d": "31.34 ohm ; 47.8 mH" 
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (d).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (d).",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (d).",
+        "d": "You have choosen option (d). The answer is correct."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+     {
+      "question": "A capacitance bridge shown in the given figure is used to measure unknown inductance in comparison with a given capacitance. The values of the components for a balanced bridge is: R<sub>2</sub> (only marked as R in the diagram) = 400 ohm ; R<sub>3</sub> = 600 ohm ; R<sub>4</sub> = 1000 ohm ; C<sub>4</sub> =  0.5 uF. Calculate the values of R<sub>1</sub> and L<sub>1</sub>.<br><p style=\"text-align:center\"><img src=\"./image/quiz2.jpg\" style=\"width:auto;height:auto;\"></p>",
+      "answers": {
+        "a": "240 ohm ; 0.12 H",
+        "b": "230 ohm ; 0.22 H" ,
+        "c": "220 ohm ; 0.32 H" ,
+        "d": "210 ohm ; 0.42 H" 
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is correct.",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (a).",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (a).",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (a).",
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+     {
+      "question": "The arms of a four arm bridge abcd ( all the bridges we've dealt with have four arms and abcd is just a naming convention ) supplied with sinusoidal voltage with the arms having following values: arm ab: A resistance of 200 ohm in parallel with a capacitance of 1 uF arm bc: 400 ohm resistance arm cd: 1000 ohm resistance arm da: a resistance R<sub>2</sub> in series with a 2uF capacitance. Determine the value of R<sub>2</sub> and the frequnecy at which the bridge will balance.<br><p style=\"text-align:center\"><img src=\"./image/quiz3.jpg\" style=\"width:auto;height:auto;\"></p>",
+      "answers": {
+        "a": "400 ohm ; 229 Hz",
+        "b": "300 ohm ; 476 Hz" ,
+        "c": "300 ohm ; 115 Hz" ,
+        "d": "400 ohm ; 398 Hz" 
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (d).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (d).",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (d).",
+        "d": "You have choosen option (d). The answer is correct."
+      },
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   ]
