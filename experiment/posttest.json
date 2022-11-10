@@ -115,7 +115,7 @@
         "a": "You have choosen option (a). The answer is correct.",
         "b": "You have choosen option (b). The answer is incorrect. The correct option is (a).",
         "c": "You have choosen option (c). The answer is incorrect. The correct option is (a).",
-        "d": "You have choosen option (d). The answer is incorrect. The correct option is (a).",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (a)."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
