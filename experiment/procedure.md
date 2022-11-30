@@ -28,7 +28,7 @@ $$ C = C_1 = C_2\ $$
 The percentage error between stimulated bridge frequency (F<sub>d</sub>) and the (voltage) source frequency (F<sub>s</sub>) is calculated
                 with respect to F<sub>d</sub> as
 
-$$ %Error = \frac{(F_d - F_c) *100}{F_d} $$
+$$ Error = \frac {(F_d - F_c) * 100} {F_d} $$
 
 where F<sub>d</sub> is also called the dial frequency. Repeat procedure for various dial frequencies.
 
