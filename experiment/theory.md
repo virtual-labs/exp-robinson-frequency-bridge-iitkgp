@@ -25,9 +25,10 @@ $$\frac{R_1}{1 + j\omega C_1 R_1} * R_4 = (R_2 - \frac{j}{\omega C_2}) * R_3\$$
               from eq.(3) we get omega (w) as
               $$\omega = \frac{1}{\sqrt{R_1R_2C_1C_2}}\$$
               if in eq. (2) we consider
-              $$R_1 = R_2 and\] \[C_1 = C_2\$$
+              $$R_1 = R_2 and\ $$
+              $$C_1 = C_2\$$
               then we get the frequency (f) and another useful resistance ratio as
-              $$f = \frac{1}{2 \pi \sqrt{R_1R_2C_1C_2}} \$$ and
+              $$f = \frac{1}{2 \pi \sqrt{R_1R_2C_1C_2}} and\$$ 
               $$\frac{R_4}{R_3} = 2\$$
    
 
