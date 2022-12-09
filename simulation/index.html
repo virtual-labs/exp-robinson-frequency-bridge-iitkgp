@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--<a href="./thevenin_website.html" target="popup" onclick="window.open('./thevenin_website.html','name','width=1350,height=675')">Open page in new window</a>
+-->
+  <title>Wien Robinson's Bridge</title>
+  <link rel="stylesheet" type="text/css" href="css/exp3_css.css">
+  <script class="include" type="text/javascript" src="./jquery_files/jquery.min.js"></script>
+  <script class="include" type="text/javascript" src="./jquery_files/jquery.jqplot.min.js"></script>
+  <script type="text/javascript" src="./jquery_files/shCore.min.js"></script>
+  <script type="text/javascript" src="./jquery_files/shBrushJScript.min.js"></script>
+  <script type="text/javascript" src="./jquery_files/shBrushXml.min.js"></script>
+  <script class="include" type="text/javascript" src="./jquery_files/jqplot.meterGaugeRenderer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML"></script>
+  <style>
+    #rcorners3 {
+      border-radius: 10px;
+      border: 2px solid #8AC007;
+      background-position: left top;
+      background-repeat: repeat;
+      padding: 5px;
+    }
+  </style>
+
+</head>
+
+<body background="./images/pg_bg.gif">
+  <script src="js/exp3_js.js"></script>
+  <div id="whole_body" style=" position:relative; margin-left:auto; margin-right:auto; top:0px; width:1120px; height:800px">
+    <div style="font-size:35px; text-align:center; height:60px"> <b>Measurement of Frequency by Wien Robinson's Bridge</b></div>
+    <div id="description" style="background-color:#99CCFF; border-radius:10px; border:2px solid #8AC007; position:absolute; /* align:left; */ left:10px; width:620px;">
+      <h3>&nbsp <u>Procedure:</u> </h3>
+      <h3>&nbsp Fixed Frequency</h3>
+      <ol type="1">
+        <li>Set <b>R<sub>4</sub> = 2*R<sub>3</sub></b> and <b>F<sub>s</sub></b> = 500Hz.</li>
+        <br>
+        <li>Switch on the supply voltage to note the unbalanced voltage in the bridge circuit.</li>
+        <br>
+        <li>Adjust the values of <b>R<sub>1</sub>, C<sub>1</sub> and R<sub>2</sub>, C<sub>2</sub></b> such that the bridge gets balanced.</li>
+        <br>
+        <li>After the Bridge is balanced (i.e. Null point has been obtained), click on the <b>Simulate</b> button to find the "effective" frequency in the bridge. </li>
+        <br>
+        <li>Note the percentage error in applied frequency and effective frequency</li>
+        <!---<br><li>Now vary the values of <b>R<sub>2</sub>, R<sub>3</sub>, R<sub>4</sub> and C<sub>4</sub></b>  from  the control box below or directly put the values in the boxes of respective elements.</li>
+		  <br><li>Observe the millivoltmeter pointer to achieve "Null".</li>
+		  <br><li>If "NULL" is achieved, switch to <b>'Measure inductor value'</b> tab and click on <b>'Simulate'</b>. Observe calculated values of
+			unknown inductor (L<sub>x</sub>) and unknown internal resistance of the inductor. Also observe the Quality factor of the
+			unknown coil, which is defined as `(2*pi*f*L)/R`.</li>-->
+      </ol>
+      <h3>&nbsp Varying Frequency</h3>
+      <ol type="1">
+        <li>
+          Set the Values of the capacitors and resistors to set the bridge Null point at 1000Hz following the above mentioned steps.
+        </li>
+        <br>
+        <li>
+          Now keeping all the passive components value fixed, vary the input frequency (not input sinusoidal amplitude) about the center point 1000Hz and note the corresponding unbalanced voltage in a tabular form.
+        </li>
+        <!---<br><li>
+      Click on the <b>Plot</b> button to see the graphical relaton between unbalanced bridge voltage and varying frequency </li>-->
+      </ol>
+
+    </div>
+
+    <form name="f1">
+
+      <div id="ckt_values1" style="position:relative; border: 2px solid #8AC007; border-radius: 10px; left:650px; height:475px; width:450px">
+        <p>
+          <img src="./images/wienrobinsonbridge2.jpg" alt="Tutorials Point" style="position:absolute; border-radius: 10px; top:0px;  right:0px; height:475px; width:450px" />
+          <img id="myImage" onclick="changeImage()" src="./images/s1.png" style="cursor: pointer; position:absolute; height:50px; width:50px; top:415px;  right:300px;" />
+          <div class="example-content" style="position:absolute; top:93px;  right:118px;">
+            <link rel="stylesheet" type="text/css" href="./jquery_files/css_metergauge.css">
+            <div id="chart3" class="plot" style="background-color:transparent; width:250px; height:150px;"></div>
+            <script src="./jquery_files/js_metergauge.js"></script>
+          </div>
+          <input type="number" name="r2" id="r2" min="1" max="1.1111E+7" step="1" value="1" onchange="pr2.value=this.value;  execute_ckt();" style="position:absolute; top:30px;  right:290px; width:68px; border:none;">
+          <input type="number" name="c1" id="c1" min="0.1" max="1111.1" step="0.1" value="100" onchange="pc1.value=this.value;  execute_ckt();" style="position:absolute; top:20px;  right:1px; width:70px">
+          <input type="number" name="c2" id="c2" min="0.1" max="1111.1" step="0.1" value="100" onchange="pc2.value=this.value;  execute_ckt();" style="position:absolute; top:120px;  right:370px; width:70px">
+          <input type="number" name="r4" id="r4" min="1" max="1.1111E+7" step="1" value="1" onchange="pr4.value=this.value;  execute_ckt();" style="position:absolute; top:273px;  right:324px; width:70px">
+          <input type="number" name="r3" id="r3" min="1" max="1.1111E+7" step="1" value="1" onchange="pr3.value=this.value;  execute_ckt();" style="position:absolute; top:262px;  right:56px; width:78px">
+          <input type="number" name="r1" id="r1" min="1" max="1.1111E+7" step="1" value="1" onchange="pr1.value=this.value;  execute_ckt();" style="position:absolute; top:160px;  right:70px; width:78px">
+
+          <input type="number" name="v1" value="5" id="v1" style="position:absolute; top:445px;  right:135px; width:50px">
+          <input type="number" name="f1" value="500" id="f1" style="position:absolute; top:410px;  right:130px; width:57px">
+          <input type="number" name="A1" value="0" id="A1" style="background-color:#E3DE84; text-align:center; position:absolute; top:213px;  right:190px; width:90px" readonly="readonly">
+        </p>
+      </div>
+      <!-- <div class="example-content" style="position:absolute; top:195px;  right:115px;">
+	<link rel="stylesheet" type="text/css" href="./jquery_files/css_metergauge.css">
+	<div id="chart3" class="plot" style="background-color:transparent; width:250px; height:150px;"></div>
+	<script src="./jquery_files/js_metergauge.js"></script>
+</div> -->
+      <div style="position:absolute; /*! top:400px; */  left:10px;">
+        <ul class="tabs">
+          <li>
+            <input type="radio" checked name="tabs" id="tab1" onclick="changemode">
+            <label for="tab1">Fixed Frequency</label>
+            <div id="tab-content1" class="tab-content animated fadeIn">
+              The current unbalanced bridge voltage reading is:
+              <input type="number" name="A2a" value="" id="A2a" style="background-color:#E3DE84; text-align:center; width:100px" readonly="readonly">&nbspmV.
+              <br>
+              Effective frequency in the balanced bridge:<br> &nbsp ( click on the <b>Calculate</b> button. )
+              <br>
+              <input type="button" value="Calculate" onclick="simulate_rc()" style="cursor: pointer; background-color:#FE4080; text-align:center; font-size: 25px; position:initial; top:50px; right:20px; /* width:150px; height:55px */">
+              <br> &nbsp&nbsp&nbspF<sub>c</sub>:&nbsp
+              <input type="text" name="fc33" id="fc33" style="width:70px" readonly="readonly">&nbsp Hz
+              &nbsp&nbsp&nbspPercentage error:&nbsp
+              <input type="text" name="pc33" id="pc33" style="width:85px" readonly="readonly">&nbsp %
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="tabs" id="tab2" onclick="changemode">
+            <label for="tab2">Varying Frequency</label>
+            <div id="tab-content2" class="tab-content animated fadeIn">
+              The current unbalanced bridge voltage reading is:
+              <input type="number" name="A2" value="" id="A2" style="background-color:#E3DE84; text-align:center; width:100px" readonly="readonly">&nbspmV.
+              <br>Now click <b>Calculate</b> to fill the corresponding dial frequency (<b>F<sub>d</sub></b>), unbalanced voltage (<b>V<sub>m</sub></b>), and error calculated as:
+              <br><br><img id="myImage1" src="./images/gif.latex8.gif" style="height: auto; width: auto;background-color:white; padding:10px">
+
+              <br><br><!---&nbsp&nbsp&nbsp&nbsp Inductor value (in mH):
+              <input type="number" name="c333" value="" id="c333" style="background-color:#E3DE84; text-align:center;  width:120px" readonly="readonly">
+              <br> Resistance value (in ohm):
+              <input type="number" name="r333" value="" id="r333" style="background-color:#E3DE84; text-align:center;  width:120px" readonly="readonly">
+              <br> Quality Factor of unknown coil:
+              <input type="number" name="rd33" value="" id="rd33" style="background-color:#E3DE84; text-align:center;  width:120px" readonly="readonly">-->
+              <input type="button" value="Calculate" onclick="simulate_rc2()" style="cursor: pointer; background-color:#FE4080; text-align:center; font-size: 25px; position:initial; top:50px; right:20px; /* width:150px; height:55px */">
+               Percentage Error is: <input type="number" name="pc22" value="" id="pc22" style="background-color:#E3DE84; text-align:center; width:100px" readonly="readonly">&nbsp%
+               <br><br>
+               <input type="button" value="Add data to Table" onclick="tbl_insert()" style="cursor: pointer; background-color:#3EA555; text-align:center; font-size: 20px; position:initial; top:50px; right:20px;">
+               <br>
+                  <!------adding table----->
+                  <!--<div id="observation" align="center" style="position:absolute; top:420px; width:1100px; left:10px ">-->
+                  				<u style="color:#FFFFFF; font-size:22px; text-align:center"><b>Observation Table </b></u>
+                  				<table cellspacing="0" style="font-size:12px; border: 2px solid black;"> <!-- cellspacing='0' is important, must stay -->
+
+                  					<tr><th>Serial no. of Observation</th><th>F<sub>d</sub> Hz</th><th>V<sub>m</sub> (Volts)</th>
+                  					<th>
+                  						Error
+                  					</th></tr><!-- Table Header -->
+
+                  					<tr><td>1st</td>
+                  					<td><input type="number"  value="" id="t1a" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					<td><input type="number"  value="" id="t1b" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					<td><input type="number"  value="" id="t1c" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					</tr>
+                  					<tr><td>2nd</td>
+                  					<td><input type="number"  value="" id="t2a" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					<td><input type="number"  value="" id="t2b" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					<td><input type="number"  value="" id="t2c" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					</tr>
+                  					<tr><td>3rd</td>
+                  					<td><input type="number"  value="" id="t3a" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					<td><input type="number"  value="" id="t3b" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					<td><input type="number"  value="" id="t3c" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					</tr>
+                  					<tr><td>4th</td>
+                  					<td><input type="number"  value="" id="t4a" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					<td><input type="number"  value="" id="t4b" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					<td><input type="number"  value="" id="t4c" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					</tr>
+                  					<tr><td>5th</td>
+                  					<td><input type="number"  value="" id="t5a" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					<td><input type="number"  value="" id="t5b" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					<td><input type="number"  value="" id="t5c" style="background-color:transparent; text-align:center; border:none; width:80px" readonly="readonly"></td>
+                  					</tr>
+                  				</table>
+                  				<br>
+                  			<!--</div>-->
+                        <!------end of table (beta mode)------>
+                        <!----<div align="right" style="position:relative; top:850px; /*width:1160px */">---->
+                          <input type="button" onclick="window.print()" value="Click here to print Page" style="cursor: pointer; text-align:center; font-size: 20px; height:40px; /*width:500px */" >
+                          <br>
+                        <!---</div>---->
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="rcorners3" style="background: url(./images/bg5.jpg); position:absolute; top:550px; right:10px; width:450px; color:#FFFFFF" align="center">
+        <b>CONTROLS</b>
+        <br> C
+        <sub>1</sub>(0.1 nF) <input type="range" name="pc1" id="pc1" min="0.1" max="1111.1" step="0.1" value="100" onchange="c1.value=this.value;  execute_ckt();" style=" width:270px">1.11 uF
+        <br> C
+        <sub>2</sub>(0.1 nF) <input type="range" name="pc2" id="pc2" min="0.1" max="1111.1" step="0.1" value="100" onchange="c2.value=this.value;  execute_ckt();" style=" width:270px">1.11 uF
+        <br> R
+        <sub>1</sub>(1 Ohm) <input type="range" name="pr1" id="pr1" min="1" max="1.1111E+7" step="1" value="1" onchange="r1.value=this.value;  execute_ckt();" style="width:240px">11.1 MOhm
+        <br> R
+        <sub>2</sub>(1 Ohm) <input type="range" name="pr2" id="pr2" min="1" max="1.1111E+7" step="1" value="1" onchange="r2.value=this.value;  execute_ckt();" style="width:240px">11.1 MOhm
+        <br> R
+        <sub>3</sub>(1 Ohm) <input type="range" name="pr3" id="pr3" min="1" max="1.1111E+7" step="1" value="1" onchange="r3.value=this.value;  execute_ckt();" style="width:240px">11.1 MOhm
+        <br> R
+        <sub>4</sub>(1 Ohm) <input type="range" name="pr4" id="pr4" min="1" max="1.1111E+7" step="1" value="1" onchange="r4.value=this.value;  execute_ckt();" style="width:240px">11.1 MOhm
+        <br>
+      </div>
+    </form>
+  </div>
+<script src="../assets/js/iframeResize.js"></script></body>
+
+</html>
