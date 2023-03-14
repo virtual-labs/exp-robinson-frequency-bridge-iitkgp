@@ -1,2 +1,0 @@
-http://stackoverflow.com/questions/19625334/range-slider-event-handler-javascript
-http://abpetkov.github.io/powerange/
