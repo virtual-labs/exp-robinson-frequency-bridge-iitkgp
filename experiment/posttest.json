@@ -87,7 +87,7 @@
       "difficulty": "beginner"
     },
      {
-      "question": "A bridge consisting of inductors is shown in the given figure. It consists of a coil with inductance L<sub>1</sub> and resistance r<sub>1</sub> in series with a non-inductive resistance R. Arm <i>bc</i> and <i>cd</i> are each a non-inductive resistance of 100 ohm. Arm <i>ad</i> consists of standard variable inductor L of resistance 32.7 ohm. Balance is obtained when L = 47.8 mH and R = 1.36 ohm. Find the resistance and inductance of coil in the arm <i>ab</i>.<br><p style=\"text-align:center\"><img src=\"./image/quiz1.jpg\" style=\"width:auto;height:auto;\"></p>",
+      "question": "A bridge consisting of inductors is shown in the given figure. It consists of a coil with inductance L<sub>1</sub> and resistance r<sub>1</sub> in series with a non-inductive resistance R. Arm <i>bc</i> and <i>cd</i> are each a non-inductive resistance of 100 ohm. Arm <i>ad</i> consists of standard variable inductor L of resistance 32.7 ohm. Balance is obtained when L = 47.8 mH and R = 1.36 ohm. Find the resistance and inductance of coil in the arm <i>ab</i>.<br><p style=\"text-align:center\"><img src=\"./images/quiz1.JPG\" style=\"width:auto;height:auto;\"></p>",
       "answers": {
         "a": "32.34 ohm ; 40.8 mH",
         "b": "29.34 ohm ; 51.8 mH" ,
@@ -104,7 +104,7 @@
       "difficulty": "beginner"
     },
      {
-      "question": "A capacitance bridge shown in the given figure is used to measure unknown inductance in comparison with a given capacitance. The values of the components for a balanced bridge is: R<sub>2</sub> (only marked as R in the diagram) = 400 ohm ; R<sub>3</sub> = 600 ohm ; R<sub>4</sub> = 1000 ohm ; C<sub>4</sub> =  0.5 uF. Calculate the values of R<sub>1</sub> and L<sub>1</sub>.<br><p style=\"text-align:center\"><img src=\"./image/quiz2.jpg\" style=\"width:auto;height:auto;\"></p>",
+      "question": "A capacitance bridge shown in the given figure is used to measure unknown inductance in comparison with a given capacitance. The values of the components for a balanced bridge is: R<sub>2</sub> (only marked as R in the diagram) = 400 ohm ; R<sub>3</sub> = 600 ohm ; R<sub>4</sub> = 1000 ohm ; C<sub>4</sub> =  0.5 uF. Calculate the values of R<sub>1</sub> and L<sub>1</sub>.<br><p style=\"text-align:center\"><img src=\"./images/quiz2.jpg\" style=\"width:auto;height:auto;\"></p>",
       "answers": {
         "a": "240 ohm ; 0.12 H",
         "b": "230 ohm ; 0.22 H" ,
@@ -115,13 +115,13 @@
         "a": "You have choosen option (a). The answer is correct.",
         "b": "You have choosen option (b). The answer is incorrect. The correct option is (a).",
         "c": "You have choosen option (c). The answer is incorrect. The correct option is (a).",
-        "d": "You have choosen option (d). The answer is incorrect. The correct option is (a).",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (a)."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
      {
-      "question": "The arms of a four arm bridge abcd ( all the bridges we've dealt with have four arms and abcd is just a naming convention ) supplied with sinusoidal voltage with the arms having following values: arm ab: A resistance of 200 ohm in parallel with a capacitance of 1 uF arm bc: 400 ohm resistance arm cd: 1000 ohm resistance arm da: a resistance R<sub>2</sub> in series with a 2uF capacitance. Determine the value of R<sub>2</sub> and the frequnecy at which the bridge will balance.<br><p style=\"text-align:center\"><img src=\"./image/quiz3.jpg\" style=\"width:auto;height:auto;\"></p>",
+      "question": "The arms of a four arm bridge abcd ( all the bridges we've dealt with have four arms and abcd is just a naming convention ) supplied with sinusoidal voltage with the arms having following values: arm ab: A resistance of 200 ohm in parallel with a capacitance of 1 uF arm bc: 400 ohm resistance arm cd: 1000 ohm resistance arm da: a resistance R<sub>2</sub> in series with a 2uF capacitance. Determine the value of R<sub>2</sub> and the frequnecy at which the bridge will balance.<br><p style=\"text-align:center\"><img src=\"./images/quiz3.JPG\" style=\"width:auto;height:auto;\"></p>",
       "answers": {
         "a": "400 ohm ; 229 Hz",
         "b": "300 ohm ; 476 Hz" ,
