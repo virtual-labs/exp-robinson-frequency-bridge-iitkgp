@@ -1,7 +1,3 @@
-# Introduction
-
-To Study Wien Robinson's frequency Bridge. 
-
 ## Theory
 
 #1 To calibrate the dial makring of signal generator by employing the Wien Robinson's bridge.
