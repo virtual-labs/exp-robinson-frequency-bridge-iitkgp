@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Hello </title>
+<script type="text/javascript">
+	var rangeInput = document.getElementById("rangeinput");
+	var buttonInput = document.getElementById("btn");
+
+	if (buttonInput.addEventListener) {
+		buttonInput.addEventListener("click", testtest, false);
+	}
+	else if (buttonInput.attachEvent) {
+		buttonInput.attachEvent('onclick', testtest);
+	}
+
+	function testtest(e) {
+		var value = rangeInput.value;
+		if (value > 0 && value < 5) {
+			alert("First");
+		} else {
+			alert("Second");
+		}
+	}
+</script>
+</head>
+<body>
+<div id="slider">
+    <input class="bar" type="range" id="rangeinput" min="1" max="25" value="1" onchange="rangevalue.value=value"/>
+    <span class="highlight"></span>
+    <output id="rangevalue">1</output>
+</div>
+</body>
+</html>
